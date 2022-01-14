@@ -1,12 +1,33 @@
-<! <!DOCTYPE html>
-<<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>ETF App</title>
-  </head>
-  <body>
-    <script type="text/javascript" src="src/app.js"></script> 
+<html lang="en">
 
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ETF App</title>
+</head>
+
+<body>
+  <header><h1>ETF App</h1></header>
+  <p name="author"><b>Author: Jason Barry</b></p>
+  <p name="info">This financial application lets you enter an ETF via a form and return all of its holdings.</p>
+  <div class="subtitle">
+
+  </div>
+  <div class="textbox">
+    <form id="etfinput" onsubmit="postData(document.getElementById('etf')); ">
+    <label for="etf"><h2>Enter ETF Name (only
+      <a href="https://docs.google.com/spreadsheets/d/1Syr2eLielHWsorxkDEZXyc55d6bNx1M3ZeI4vdn7Qzo/edit" target="_blank">these</a>
+        available)</h2></label>
+    <input type="text" id="etf" name="etf" value="^GSPC">
+    <input type="submit" value="Submit">
+  </form>
+  </div>
+
+  <div id="constituents"></div>
+
+  <script src="/js/app.js"></script>
+
+</body>
+
 </html>

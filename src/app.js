@@ -21,9 +21,9 @@ app.use(express.static(publicDirectoryPath));
 // setup body parsing
 app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.render("index");
-});
+// app.get("/", (req, res) => {
+//   res.render("index");
+// });
 
 const api_key = finnhub.ApiClient.instance.authentications['api_key'];
 api_key.apiKey = "c7bp9fiad3ia366g24n0"
