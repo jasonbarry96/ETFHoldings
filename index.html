@@ -15,18 +15,23 @@
 
   </div>
   <div class="textbox">
-    <form id="etfinput" onsubmit="postData(document.getElementById('etf')); ">
+    <form id="etfinput" onsubmit="postData(document.getElementById('etf'));">
     <label for="etf"><h2>Enter ETF Name (only
       <a href="https://docs.google.com/spreadsheets/d/1Syr2eLielHWsorxkDEZXyc55d6bNx1M3ZeI4vdn7Qzo/edit" target="_blank">these</a>
         available)</h2></label>
     <input type="text" id="etf" name="etf" value="^GSPC">
     <input type="submit" value="Submit">
   </form>
+  <br>
+  <form id="csvinput" onsubmit="csvPostData(document.getElementById('csvFile'));">
+    <input type="file" id="csvFile" accept=".csv" />
+    <input type="submit" value="Submit CSV">
+  </form>
   </div>
 
   <div id="constituents"></div>
 
-  <script src="public/js/app.js"></script>
+  <script src="/public/js/app.js"></script>
 
 </body>
 
